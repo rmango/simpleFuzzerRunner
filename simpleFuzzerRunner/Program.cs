@@ -3,6 +3,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 using System.Diagnostics;
+using System.Threading;
 
 namespace simpleFuzzerRunner
 {
@@ -24,9 +25,8 @@ namespace simpleFuzzerRunner
                 Console.WriteLine("A simple webserver. Press a key to quit.");
                 Process.Start("C:\\Users\\Morga\\Documents\\Github\\BugId\\BugId.cmd", "msie --nApplicationMaxRunTime=10");
 
-                //p.WaitForExit();
-                System.Threading.Thread.Sleep(11000);
-                //Console.ReadKey();
+                //wait for 12 seconds
+                Thread.Sleep(12000);
 
                 ws.Stop();
                 index++;
